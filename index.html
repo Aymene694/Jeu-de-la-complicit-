@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Jeu de la Complicité</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Le Jeu de la Complicité</h1>
+        <div id="setup">
+            <div>
+                <label for="team1">Nom de l'équipe 1:</label>
+                <input type="text" id="team1" placeholder="Équipe 1">
+                <label for="team1-player1">Participant 1:</label>
+                <input type="text" id="team1-player1" placeholder="Participant 1">
+                <label for="team1-player2">Participant 2:</label>
+                <input type="text" id="team1-player2" placeholder="Participant 2">
+            </div>
+            <div>
+                <label for="team2">Nom de l'équipe 2:</label>
+                <input type="text" id="team2" placeholder="Équipe 2">
+                <label for="team2-player1">Participant 1:</label>
+                <input type="text" id="team2-player1" placeholder="Participant 1">
+                <label for="team2-player2">Participant 2:</label>
+                <input type="text" id="team2-player2" placeholder="Participant 2">
+            </div>
+            <button id="start-game">Commencer le jeu</button>
+        </div>
+        <div id="game" style="display: none;">
+            <div id="scores">
+                <div id="team1-score"></div>
+                <div id="team2-score"></div>
+            </div>
+            <div id="round-info"></div>
+            <div id="player-action" style="display: none;">
+                <p id="footballer-name"></p>
+                <button id="give-point-team1">Donner le point à <span id="team1-name"></span></button>
+                <button id="give-point-team2">Donner le point à <span id="team2-name"></span></button>
+                <button id="pass-player">Passer le joueur</button>
+                <p>Passes restantes: <span id="passes-left">2</span></p>
+            </div>
+            <button id="next-round" style="display: none;">Tour Suivant</button>
+            <button id="replay" style="display: none;">Rejouer</button>
+            <button id="restart" style="display: none;">Recommencer avec de nouvelles équipes</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
